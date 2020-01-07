@@ -2,7 +2,8 @@ package application;
 
 import chess.ChessPiece;
 
-public class UI {
+public class UI { // UI - User interface - Essa classe vai imprimir a matriz de peças da partida.
+
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i++) {
 			System.out.print((8 - i) + " ");

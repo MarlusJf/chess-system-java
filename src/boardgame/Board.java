@@ -26,14 +26,20 @@ public class Board {
 	public void setColumn(int column) {
 		this.column = column;
 	}
-	
-	public Piece piece(int row, int column) {
+
+	public Piece piece(int row, int column) { // retorna a peçã da posição passada no parametro
 		return pieces[row][column];
 	}
-	
-	public Piece piece(Position position) {
+
+	public Piece piece(Position position) { // retorna a peçã da posição passada no parametro
 		return pieces[position.getRow()][position.getColumn()];
 	}
 
+	public void placePiece(Piece piece, Position position) { // Metódo para colocar a peça
+		// Esse metodo vai na matriz e vai colocar a peça na posição indicada
+
+		pieces[position.getRow()][position.getColumn()] = piece;
+		piece.position = position;
+	}
 
 }
