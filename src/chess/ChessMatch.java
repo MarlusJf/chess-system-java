@@ -23,10 +23,14 @@ public class ChessMatch { // Partida de xadrez
 		return mat;
 	}
 	
+	public void placeNewPiece(char column, int row, ChessPiece piece) {
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
+	}
+	
 	private void initialSetup() {
 		// Esse metodo é responsavel por iniciar a partida de xadrez colocando as peças no tabuleiro.
-		board.placePiece(new Rook(board, Color.WHITE), new Position(2,1)); // Colocando uma peça torre
-		board.placePiece(new King(board, Color.BLACK), new Position(0,4)); // Colocando uma peça rei
-		board.placePiece(new King(board, Color.WHITE), new Position(7,4)); // Colocando uma peça rei
+		placeNewPiece('b',6, new Rook(board, Color.WHITE)); // Colocando uma peça torre
+		placeNewPiece('e',8, new King(board, Color.BLACK)); // Colocando uma peça rei
+		placeNewPiece('e',1,new King(board, Color.WHITE)); // Colocando uma peça rei
 	}
 }
