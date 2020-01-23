@@ -29,8 +29,19 @@ public class ChessMatch { // Partida de xadrez
 	
 	private void initialSetup() {
 		// Esse metodo é responsavel por iniciar a partida de xadrez colocando as peças no tabuleiro.
-		placeNewPiece('b',6, new Rook(board, Color.WHITE)); // Colocando uma peça torre
-		placeNewPiece('e',8, new King(board, Color.BLACK)); // Colocando uma peça rei
-		placeNewPiece('e',1,new King(board, Color.WHITE)); // Colocando uma peça rei
+		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
+        placeNewPiece('c', 2, new Rook(board, Color.WHITE));
+        placeNewPiece('d', 2, new Rook(board, Color.WHITE));
+        placeNewPiece('e', 2, new Rook(board, Color.WHITE));
+        placeNewPiece('e', 1, new Rook(board, Color.WHITE));
+        placeNewPiece('d', 1, new King(board, Color.WHITE));
+
+        placeNewPiece('c', 7, new Rook(board, Color.BLACK));
+        placeNewPiece('c', 8, new Rook(board, Color.BLACK));
+        placeNewPiece('d', 7, new Rook(board, Color.BLACK));
+        placeNewPiece('e', 7, new Rook(board, Color.BLACK));
+        placeNewPiece('e', 8, new Rook(board, Color.BLACK));
+        placeNewPiece('d', 8, new King(board, Color.BLACK));
 	}
+	
 }
